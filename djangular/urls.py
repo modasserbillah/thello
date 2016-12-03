@@ -22,3 +22,8 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='thello/home.html')),
     url(r'^thello/', include('thello.urls'))
 ]
+
+from djangular import settings
+urlpatterns += patterns('',
+        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    )
