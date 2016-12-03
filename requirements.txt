@@ -1,2 +1,4 @@
 Django==1.9.1
 djangorestframework==3.5.3
+gunicorn==19.6.0
+
